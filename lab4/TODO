@@ -1,0 +1,13 @@
+1. Szukanie liczb pierwszych
+  - początek, koniec, liczba procesów
+  - podzielić na przedziały, proces dla przedziału
+
+2. Szukanie liczb pierwszych
+  - zapis do struct
+    typedef struct {
+      int low_bound;
+      int up_bound;
+      int wynik;
+    } wynik_t
+
+write(fd, &result, sizeof(result));

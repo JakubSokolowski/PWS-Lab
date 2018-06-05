@@ -1,0 +1,4 @@
+Passing args to processes
+Timing proc
+Writing and reading structs in binary files using write(), read()
+File info by fstat

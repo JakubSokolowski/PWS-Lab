@@ -1,0 +1,9 @@
+1. To samo co w lab 4, tylko z lockf
+2. To samo, tylko z użyciem łącza
+  for(i ; ..) {
+    if(fork()==0){
+    ... Obliczenia
+    write(fd(1),....)
+    }
+
+  }

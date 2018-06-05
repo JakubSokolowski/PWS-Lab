@@ -1,0 +1,20 @@
+1. Kolejki fifo, execl, nie trzeba blokować
+2. Optymalizacja, mniejsza liczba przedziałów
+  s. 68
+  pierwsze pocz, kon, proc, l. przedziałów
+  Procesy wykonawcze biorą z kolejki wej przedziały
+  Kryterium stopu - proc. wykonawczego
+  Poradzić sobie z zakleszczeniem - podzielić proces zaarządzający na piszący
+  i odczytujący
+
+3. Kolejka POSIX - problem producenta i konsumenta
+  struct {
+  int type;
+  int num;
+  char text[size]; -> "Producent 1 Krok 1"
+  }
+
+  proces init - tworzy kolejkę POSIX
+  proces producent - numer procesu, liczba kroków
+  kons - l_kroków
+4 Liczby pierwsze za pomocą kolejki POSIXs
