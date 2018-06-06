@@ -42,9 +42,12 @@ int main(void) {
     for (i=0; i<KROKI; i++) {
         rec = recvfrom(s, &msg, blen, 0,(struct sockaddr *) &adr_cli, &slen);
         if(rec < 0) blad("recvfrom()");
-            printf("Odebrano komunikat z %s:%d res %d\n Typ: %d %s\n",
-        inet_ntoa(adr_cli.sin_addr), ntohs(adr_cli.sin_port),
-        rec,msg.typ,msg.buf);
+        printf("Odebrano komunikat z %s:%d res %d\n Typ: %d %s\n"
+            , inet_ntoa(adr_cli.sin_addr)
+            , ntohs(adr_cli.sin_port)
+            , rec
+            , msg.typ
+            , msg.buf);
         // Odpowiedz -----
         sprintf(msg.buf,"Odpowiedz %d",i);
         snd = sendto(s, &msg, blen, 0,(struct sockaddr *) &adr_cli, slen);
